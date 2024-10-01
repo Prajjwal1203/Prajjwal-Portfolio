@@ -3,7 +3,7 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import AiInterviewImg from "@/public/AiInterview.jpg";
 import contentgeneratorImg from "@/public/contentgenerator.png";
-
+import dashboardadminImg from "@/public/dashboardadmin.png"
 
 export const links = [
   {
@@ -75,6 +75,13 @@ export const projectsData = [
       "The content generator tool will generate content for your saas app and many more features as well and provide the output in rich-text editor format.",
     tags: ["Next.js", "TypeScript", "Gemini AI API", "Tailwind", "Clerk","Drizzle ORM"],
     imageUrl: contentgeneratorImg,
+  },
+  {
+    title: "Admin-Dashboard Panel",
+    description:
+      "This admin panel is built with the help of react.js using the charts & graphs library of react.It contains all the data of users,order,sales analytics etc displays the data with the help of charts and graphs.",
+    tags: ["React.js", "Tailwind.css",],
+    imageUrl: dashboardadminImg,
   },
 ] as const;
 
