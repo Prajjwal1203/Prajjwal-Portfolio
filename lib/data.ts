@@ -3,7 +3,9 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import AiInterviewImg from "@/public/AiInterview.jpg";
 import contentgeneratorImg from "@/public/contentgenerator.png";
-import dashboardadminImg from "@/public/dashboardadmin.png"
+import dashboardadminImg from "@/public/dashboardadmin.png";
+import objectImg from "@/public/object.png"
+
 
 export const links = [
   {
@@ -66,7 +68,6 @@ export const projectsData = [
       "This tool will help the fresher to take up their mock interview depending on their techstack,job description and job roles.",
     tags: ["React", "Next.js", "Gemini AI API", "Tailwind", "Clerk","Drizzle ORM"],
     imageUrl: AiInterviewImg,
-   
   
   },
   {
@@ -82,6 +83,14 @@ export const projectsData = [
       "This admin panel is built with the help of react.js using the charts & graphs library of react.It contains all the data of users,order,sales analytics etc displays the data with the help of charts and graphs.",
     tags: ["React.js", "Tailwind.css",],
     imageUrl: dashboardadminImg,
+  },
+  {
+    title: "Human-Detector",
+    description:
+      "Human-detector is made with the help of tensorflow and coco-SSD model of Javascript.It blows as sound as soon as it identifies the human and it can clearly differentiates between human and other onjects.",
+    tags: ["React", "Next.js", "Tailwind"],
+    imageUrl: objectImg,
+  
   },
 ] as const;
 
