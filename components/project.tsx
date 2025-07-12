@@ -7,11 +7,16 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 type ProjectProps = (typeof projectsData)[number];
 
+
+
 export default function Project({
   title,
   description,
   tags,
   imageUrl,
+  link,
+  
+  
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -46,6 +51,17 @@ export default function Project({
               </li>
             ))}
           </ul>
+          {link && (
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+            >
+              Live Demo
+            </a>
+          )}
+         
         </div>
 
         <Image

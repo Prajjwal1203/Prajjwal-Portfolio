@@ -5,6 +5,7 @@ import AiInterviewImg from "@/public/AiInterview.jpg";
 import contentgeneratorImg from "@/public/contentgenerator.png";
 import dashboardadminImg from "@/public/dashboardadmin.png";
 import objectImg from "@/public/object.png"
+import img from "@/public/img.png";
 
 
 export const links = [
@@ -66,31 +67,42 @@ export const projectsData = [
     title: "Ai-interview-Mocker",
     description:
       "This tool will help the fresher to take up their mock interview depending on their techstack,job description and job roles.",
-    tags: ["React", "Next.js", "Gemini AI API", "Tailwind", "Clerk","Drizzle ORM"],
+    tags: ["React", "Next.js", "Gemini AI API","PostgreSQL","Clerk","Drizzle ORM"],
     imageUrl: AiInterviewImg,
+     link:"https://ai-interview-coral.vercel.app/"
   
   },
   {
-    title: "Content-generator for Saas App",
+    title: "Content-generator",
     description:
-      "The content generator tool will generate content for your saas app and many more features as well and provide the output in rich-text editor format.",
-    tags: ["Next.js", "TypeScript", "Gemini AI API", "Tailwind", "Clerk","Drizzle ORM"],
+      "The content generator tool will generate content for your saas app.",
+    tags: ["Next.js", "TypeScript", "Gemini AI API","PostgreSQL", "Clerk","Drizzle ORM"],
     imageUrl: contentgeneratorImg,
+     link:"https://content-generator-for-saas-app.vercel.app/"
   },
   {
     title: "Admin-Dashboard Panel",
     description:
-      "This admin panel is built with the help of react.js using the charts & graphs library of react.It contains all the data of users,order,sales analytics etc displays the data with the help of charts and graphs.",
+      "This admin panel is built with the help of react.js using the charts & graphs library of react.",
     tags: ["React.js", "Tailwind.css",],
     imageUrl: dashboardadminImg,
+     link:"https://admin-dashboard-nu-peach.vercel.app/"
   },
   {
     title: "Human-Detector",
     description:
-      "Human-detector is made with the help of tensorflow and coco-SSD model of Javascript.It blows as sound as soon as it identifies the human and it can clearly differentiates between human and other onjects.",
-    tags: ["React", "Next.js", "Tailwind"],
+      "Human-detector blows as sound as soon as it identifies the human and it can clearly differentiates between human and other ojects.",
+    tags: ["React", "Next.js","Tensorflow","Coco-SSD"],
     imageUrl: objectImg,
-  
+    link:"https://person-detector-alarm.vercel.app/"
+  },
+   {
+    title: "URL Shortner",
+    description:
+      "This is a URL shortner app which will shorten the long URL to a short URL and it can be used for various purposes.",
+    tags: ["React","Supabase"],
+    imageUrl: img,
+    link:"https://url-shortener-seven-chi.vercel.app/"
   },
 ] as const;
 
@@ -106,15 +118,11 @@ export const skillsData = [
   "Github",
   "BootStrap",
   "Tailwind",
-  "Prisma",
   "MongoDB",
-  "Redux",
-  "GraphQL",
   "Supabase",
   "Express",
   "PostgreSQL",
   "Python",
-  "FireBase",
   "Framer Motion",
   "GSAP"
 ] as const;

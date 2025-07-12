@@ -41,7 +41,7 @@ export default function About() {
         games,going for a walk and hangout with the friends. I also enjoy{" "}
         <span className="font-medium">learning new things</span>. I am currently
         learning about{" "}
-        <span className="font-medium">Devops and different tools and technologies that are use in it</span>.
+        <span className="font-medium">Devops </span>.
       </p>
     </motion.section>
   );
