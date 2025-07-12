@@ -67,7 +67,7 @@ export const projectsData = [
     title: "Ai-interview-Mocker",
     description:
       "This tool will help the fresher to take up their mock interview depending on their techstack,job description and job roles.",
-    tags: ["React", "Next.js", "Gemini AI API","PostgreSQL","Clerk","Drizzle ORM"],
+    tags: ["Next.js", "Gemini AI API","PostgreSQL","Clerk","Drizzle ORM"],
     imageUrl: AiInterviewImg,
      link:"https://ai-interview-coral.vercel.app/"
   
