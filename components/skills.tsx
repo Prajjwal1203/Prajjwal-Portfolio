@@ -27,13 +27,13 @@ export default function Skills() {
     <section
       id="skills"
       ref={ref}
-      className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
+      className="mb-28 max-w-4xl scroll-mt-28 text-center sm:mb-36"
     >
       <SectionHeading>My skills</SectionHeading>
-      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
+      <ul className="flex flex-wrap justify-center gap-2.5 text-sm text-stone-700 dark:text-stone-200">
         {skillsData.map((skill, index) => (
           <motion.li
-            className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
+            className="rounded-full borderBlack bg-white/60 px-4 py-2.5 transition-colors hover:border-[#bd5e3d]/30 hover:text-[#a34e32] dark:bg-white/[0.03] dark:hover:text-[#e3a087]"
             key={index}
             variants={fadeInAnimationVariants}
             initial="initial"

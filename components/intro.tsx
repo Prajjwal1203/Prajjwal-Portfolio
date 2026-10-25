@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
@@ -19,101 +18,120 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+      className="mb-24 w-full max-w-5xl scroll-mt-32 pt-8 sm:mb-0 sm:pt-14"
     >
-      <div className="flex items-center justify-center">
-        <div className="relative">
+      <div className="grid items-center gap-12 sm:grid-cols-[1fr_0.72fr] sm:gap-16">
+        <div className="order-2 text-center sm:order-1 sm:text-left">
           <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: "tween",
-              duration: 0.2,
-            }}
+            className="mb-6 inline-flex items-center gap-2 rounded-full border border-stone-900/10 px-3 py-1.5 text-xs font-medium tracking-wide text-stone-600 dark:border-white/10 dark:text-stone-300"
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.45 }}
           >
-            <Image
-              src={Photo1}
-              alt="Prajjwal Portrait"
-              width="192"
-              height="192"
-              quality="95"
-              priority={true}
-              className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
-            />
+            <span className="h-2 w-2 rounded-full bg-emerald-500" />
+            OPEN TO OPPORTUNITIES
           </motion.div>
 
-          <motion.span
-            className="absolute bottom-0 right-0 text-4xl"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 125,
-              delay: 0.1,
-              duration: 0.7,
-            }}
+          <motion.p
+            className="mb-3 text-sm font-medium uppercase tracking-[0.22em] text-[#a34e32]"
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.08 }}
           >
-            👋
-          </motion.span>
+            Hello, I&apos;m Prajjwal
+          </motion.p>
+          <motion.h1
+            className="text-5xl font-semibold leading-[1.08] tracking-[-0.055em] sm:text-6xl lg:text-7xl"
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.12, duration: 0.6 }}
+          >
+            I build thoughtful{" "}
+            <span className="font-normal italic text-[#a34e32]">digital</span>{" "}
+            experiences.
+          </motion.h1>
+          <motion.p
+            className="mx-auto mt-6 max-w-xl text-base leading-7 text-stone-600 dark:text-stone-300 sm:mx-0 sm:text-lg sm:leading-8"
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+          >
+            Software developer focused on building useful, polished web
+            applications with React, Next.js, and modern web technologies.
+          </motion.p>
+
+          <motion.div
+            className="mt-8 flex flex-wrap items-center justify-center gap-3 text-sm font-medium sm:justify-start"
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.26, duration: 0.6 }}
+          >
+            <Link
+              href="#contact"
+              className="group flex items-center gap-2 rounded-full bg-stone-900 px-6 py-3.5 text-white transition hover:bg-[#a34e32] dark:bg-stone-100 dark:text-stone-900 dark:hover:bg-[#e3a087]"
+              onClick={() => {
+                setActiveSection("Contact");
+                setTimeOfLastClick(Date.now());
+              }}
+            >
+              Let&apos;s talk
+              <BsArrowRight className="transition group-hover:translate-x-1" />
+            </Link>
+
+            <a
+              className="group flex items-center gap-2 rounded-full borderBlack px-5 py-3.5 text-stone-700 transition hover:bg-stone-100 dark:text-stone-200 dark:hover:bg-white/10"
+              href="/Prajwal_Resume.pdf"
+              download
+            >
+              Download CV
+              <HiDownload className="transition group-hover:translate-y-1" />
+            </a>
+
+            <a
+              aria-label="LinkedIn profile"
+              href="https://www.linkedin.com/in/prajjwal-mishra-434a37218"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 rounded-full borderBlack p-3.5 text-stone-600 transition hover:border-[#a34e32]/30 hover:text-[#a34e32] dark:text-stone-300"
+            >
+              <BsLinkedin />
+            </a>
+
+            <a
+              aria-label="GitHub profile"
+              href="https://github.com/Prajjwal1203"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 rounded-full borderBlack p-3.5 text-[1.35rem] text-stone-600 transition hover:border-[#a34e32]/30 hover:text-[#a34e32] dark:text-stone-300"
+            >
+              <FaGithubSquare />
+            </a>
+          </motion.div>
         </div>
+
+        <motion.div
+          className="relative order-1 mx-auto w-full max-w-sm sm:order-2"
+          initial={{ opacity: 0, y: 20, rotate: 2 }}
+          animate={{ opacity: 1, y: 0, rotate: 0 }}
+          transition={{ delay: 0.1, duration: 0.7 }}
+        >
+          <div className="absolute -inset-3 rotate-3 rounded-[2rem] border border-[#bd5e3d]/20" />
+          <div className="relative aspect-[4/5] overflow-hidden rounded-[1.6rem] bg-[#eee9e0] dark:bg-white/10">
+            <Image
+              src={Photo1}
+              alt="Portrait of Prajjwal"
+              fill
+              sizes="(max-width: 640px) 80vw, 360px"
+              quality={90}
+              priority
+              className="object-cover"
+            />
+          </div>
+          <span className="absolute -bottom-5 -left-5 rounded-xl border border-stone-900/10 bg-[#faf9f6] px-4 py-3 text-xs font-medium tracking-wide text-stone-600 shadow-sm dark:border-white/10 dark:bg-[#1d1d1a] dark:text-stone-300">
+            BASED IN INDIA
+          </span>
+        </motion.div>
       </div>
-
-      <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-           <span className="font-bold">Hello, I'm Prajjwal.</span> I'm a{" "}
-          <span className="font-bold">Software DEVELOPER</span> and a {" "}
-          <span className="font-bold">fresher who is looking for opportunity to work with a team and explore more.</span>. I enjoy
-          building <span className="italic"> fully functional sites & Web-apps</span>.
-      </motion.h1>
-
-      <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.1,
-        }}
-      >
-        <Link
-          href="#contact"
-          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
-          onClick={() => {
-            setActiveSection("Contact");
-            setTimeOfLastClick(Date.now());
-          }}
-        >
-          Contact me here{" "}
-          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
-        </Link>
-
-        <a
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-          href={'/Prajwal_resume.pdf'}
-          download
-        >
-          Download CV{" "}
-          <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
-        </a>
-
-        <a
-          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://www.linkedin.com/in/prajjwal-mishra-434a37218"
-          target="_blank"
-        >
-          <BsLinkedin />
-        </a>
-
-        <a
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://github.com/Prajjwal1203"
-          target="_blank"
-        >
-          <FaGithubSquare />
-        </a>
-      </motion.div>
     </section>
   );
 }

@@ -11,7 +11,7 @@ export default function About() {
   return (
     <motion.section
       ref={ref}
-      className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
+      className="mb-28 max-w-3xl scroll-mt-28 text-center leading-8 text-stone-600 dark:text-stone-300 sm:mb-36"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
@@ -20,28 +20,28 @@ export default function About() {
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
         Currently I'm pursuing a degree in{" "}
-        <span className="font-medium">Computer Science</span>, I decided to pursue my
+        <span className="font-medium text-stone-900 dark:text-stone-100">Computer Science</span>, I decided to pursue my
         passion for programming. I have learned many tools and technologies for{" "}
-        <span className="font-medium">full-stack web development</span>.{" "}
+        <span className="font-medium text-stone-900 dark:text-stone-100">full-stack web development</span>.{" "}
         <span className="italic">My favorite part of programming</span> is the
         problem-solving aspect. I love the
         feeling of finally figuring out a solution to a problem. My core stack
         is{" "}
-        <span className="font-medium">
+        <span className="font-medium text-stone-900 dark:text-stone-100">
           React,Next.js,Express.js, Node.js, and MongoDB
         </span>
         . I am also familiar with tools such as git ,github,figma,canva etc. and technologies such as TypeScript and Prisma,Firebase,Supabase. I am always looking to
         learn new technologies. I am currently looking for a{" "}
-        <span className="font-medium">full-time position</span> as a software
+        <span className="font-medium text-stone-900 dark:text-stone-100">full-time position</span> as a software
         developer.
       </p>
 
       <p>
         <span className="italic">When I'm not coding</span>, I enjoy playing
         games,going for a walk and hangout with the friends. I also enjoy{" "}
-        <span className="font-medium">learning new things</span>. I am currently
+        <span className="font-medium text-stone-900 dark:text-stone-100">learning new things</span>. I am currently
         learning about{" "}
-        <span className="font-medium">Devops </span>.
+        <span className="font-medium text-stone-900 dark:text-stone-100">Devops </span>.
       </p>
     </motion.section>
   );

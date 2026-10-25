@@ -15,7 +15,7 @@ export default function Contact() {
     <motion.section
       id="contact"
       ref={ref}
-      className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
+      className="mb-20 w-full max-w-2xl scroll-mt-28 text-center sm:mb-28"
       initial={{
         opacity: 0,
       }}
@@ -31,16 +31,12 @@ export default function Contact() {
     >
       <SectionHeading>Contact me</SectionHeading>
 
-      <p className="text-gray-700 -mt-6 dark:text-white/80">
-        Please contact me directly at{" "}
-        <a className="underline" href="mailto:example@gmail.com">
-          example@gmail.com
-        </a>{" "}
-        or through this form.
+      <p className="-mt-5 text-stone-600 dark:text-stone-300">
+        Have a project in mind or just want to say hello? Send me a message.
       </p>
 
       <form
-        className="mt-10 flex flex-col dark:text-black"
+        className="mt-8 flex flex-col text-left"
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
 
@@ -53,7 +49,7 @@ export default function Contact() {
         }}
       >
         <input
-          className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="h-14 rounded-xl borderBlack bg-white/60 px-4 text-stone-900 transition placeholder:text-stone-400 focus:border-[#bd5e3d]/50 focus:outline-none dark:bg-white/[0.03] dark:text-white"
           name="senderEmail"
           type="email"
           required
@@ -61,7 +57,7 @@ export default function Contact() {
           placeholder="Your email"
         />
         <textarea
-          className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="my-3 h-52 rounded-xl borderBlack bg-white/60 p-4 text-stone-900 transition placeholder:text-stone-400 focus:border-[#bd5e3d]/50 focus:outline-none dark:bg-white/[0.03] dark:text-white"
           name="message"
           placeholder="Your message"
           required

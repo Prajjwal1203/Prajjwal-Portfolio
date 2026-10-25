@@ -3,13 +3,32 @@
 @tailwind utilities;
 
 html {
-  --line-color: #e5e7eb;
+  --line-color: #e7e2d9;
+  scroll-behavior: smooth;
 }
 
 html.dark {
-  --line-color: rgba(255, 255, 255, 0.2);
+  --line-color: rgba(255, 255, 255, 0.14);
+}
+
+body {
+  background: #faf9f6;
+}
+
+html.dark body {
+  background: #151513;
+}
+
+::selection {
+  color: #fff;
+  background: #bd5e3d;
+}
+
+:focus-visible {
+  outline: 2px solid #bd5e3d;
+  outline-offset: 3px;
 }
 
 .borderBlack {
-  @apply border border-black/10;
+  @apply border border-stone-900/10 dark:border-white/10;
 }
