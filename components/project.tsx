@@ -66,7 +66,6 @@ export default function Project({
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              rel="noreferrer"
               className="mt-5 inline-flex w-fit items-center gap-2 rounded-full border border-stone-900/10 px-4 py-2 text-sm font-medium text-stone-800 transition hover:border-[#a34e32]/30 hover:text-[#a34e32] dark:border-white/10 dark:text-stone-100 dark:hover:text-[#e3a087]"
             >
               View project <span aria-hidden="true">↗</span>
